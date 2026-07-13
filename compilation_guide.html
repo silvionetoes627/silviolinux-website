@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SilvioLinux - Guia de Compilação</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo.svg" alt="SL Logo" width="40">
+            SilvioLinux
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="compilation_guide.html">Guia de Compilação</a></li>
+                <li><a href="download_images_precompileds.html">Imagens Prontas</a></li>
+                <li><a href="download_sourcecode.html">Código-Fonte</a></li>
+                <li><a href="status_silviolinux_versions.html">Status</a></li>
+                <li><a href="changelog.html">Changelog</a></li>
+                <li><a href="wiki.html">Wiki</a></li>
+                <li><a href="docs.html">Docs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h1>Guia de Compilação SilvioLinux</h1>
+            <p>Siga os passos abaixo para compilar sua própria imagem do SilvioLinux utilizando a camada meta-silviolinux.</p>
+            
+            <h2>1. Requisitos do Sistema</h2>
+            <p>Você precisará de uma máquina Linux (Ubuntu 22.04+ recomendado) com pelo menos 100GB de espaço livre e as dependências do Yocto instaladas.</p>
+            <pre>sudo apt-get install gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm python3-subunit mesa-common-dev zstd liblz4-tool</pre>
+
+            <h2>2. Clonar os Repositórios</h2>
+            <pre>git clone -b scarthgap git://git.yoctoproject.org/poky
+cd poky
+git clone https://codeberg.org/SilvioLinux/meta-silviolinux</pre>
+
+            <h2>3. Configurar o Ambiente</h2>
+            <pre>source oe-init-build-env</pre>
+
+            <h2>4. Adicionar a Camada</h2>
+            <pre>bitbake-layers add-layer ../meta-silviolinux</pre>
+
+            <h2>5. Iniciar a Compilação</h2>
+            <pre>bitbake silviolinux-image-minimal</pre>
+            <p>Aguarde a conclusão. O tempo depende do seu hardware.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SilvioLinux System. Criado com HTML5 e CSS3 Puros.</p>
+    </footer>
+</body>
+</html>

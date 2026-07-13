@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SilvioLinux - Wiki</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo.svg" alt="SL Logo" width="40">
+            SilvioLinux
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="compilation_guide.html">Guia de Compilação</a></li>
+                <li><a href="download_images_precompileds.html">Imagens Prontas</a></li>
+                <li><a href="download_sourcecode.html">Código-Fonte</a></li>
+                <li><a href="status_silviolinux_versions.html">Status</a></li>
+                <li><a href="changelog.html">Changelog</a></li>
+                <li><a href="wiki.html">Wiki</a></li>
+                <li><a href="docs.html">Docs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h1>Wiki SilvioLinux</h1>
+            <h2>Comandos de Gravação no HD/SSD</h2>
+            <p>Após baixar ou compilar a imagem, utilize os comandos abaixo para gravar o sistema em um disco físico.</p>
+            
+            <div class="card">
+                <h3>Usando o comando DD (Linux/macOS)</h3>
+                <p><strong>Atenção:</strong> Substitua <code>/dev/sdX</code> pelo caminho correto do seu disco. O uso incorreto pode apagar seus dados.</p>
+                <pre>sudo dd if=silviolinux-image.img of=/dev/sdX bs=4M status=progress conv=fsync</pre>
+            </div>
+
+            <div class="card">
+                <h3>Verificando o disco</h3>
+                <pre>lsblk</pre>
+                <p>Utilize este comando para identificar qual é o seu HD/SSD antes de iniciar a gravação.</p>
+            </div>
+
+            <div class="card">
+                <h3>Dicas de Pós-Instalação</h3>
+                <ul>
+                    <li>Certifique-se de que a BIOS/UEFI está configurada para o modo correto.</li>
+                    <li>O SilvioLinux utiliza o sistema de arquivos EXT4 por padrão na partição root.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SilvioLinux System. Criado com HTML5 e CSS3 Puros.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SilvioLinux - Documentação</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo.svg" alt="SL Logo" width="40">
+            SilvioLinux
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="compilation_guide.html">Guia de Compilação</a></li>
+                <li><a href="download_images_precompileds.html">Imagens Prontas</a></li>
+                <li><a href="download_sourcecode.html">Código-Fonte</a></li>
+                <li><a href="status_silviolinux_versions.html">Status</a></li>
+                <li><a href="changelog.html">Changelog</a></li>
+                <li><a href="wiki.html">Wiki</a></li>
+                <li><a href="docs.html">Docs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h1>Documentação Oficial SilvioLinux</h1>
+            <p>Tudo o que você precisa saber sobre a arquitetura e filosofia do sistema.</p>
+            
+            <div class="card">
+                <h3>Arquitetura do Sistema</h3>
+                <p>O SilvioLinux é construído sobre o Yocto Project, permitindo uma customização profunda do kernel e dos pacotes incluídos. Utilizamos o gerenciador de pacotes <code>opkg</code> para sistemas embarcados ou <code>rpm/deb</code> dependendo da configuração da camada.</p>
+            </div>
+
+            <div class="card">
+                <h3>Filosofia LTS</h3>
+                <p>Cada versão do SilvioLinux é lançada com um compromisso de 4 anos de suporte. Isso garante que ambientes de produção tenham estabilidade a longo prazo sem a necessidade de migrações frequentes.</p>
+            </div>
+
+            <div class="card">
+                <h3>Desenvolvimento de Camadas</h3>
+                <p>A camada principal <code>meta-silviolinux</code> contém as receitas (recipes) necessárias para construir o sistema base. Desenvolvedores podem estender esta funcionalidade criando suas próprias camadas sobre a base do SilvioLinux.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SilvioLinux System. Criado com HTML5 e CSS3 Puros.</p>
+    </footer>
+</body>
+</html>
