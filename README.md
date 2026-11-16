@@ -1,37 +1,24 @@
-# Site oficial do SilvioLinux
+# Site oficial do SilvioLinux (pacote inicial)
 
-Site estático em português brasileiro, feito com HTML5 e CSS3 puros, sem JavaScript.
+Site estático em HTML5 e CSS3 puros, sem JavaScript.
 
 ## Arquivos
 - `index.html` — página inicial
-- `download_sourcecode.html` — instruções para clonar o código-fonte
-- `changelog.html` — roadmap e tabela de lançamentos
-- `requirements.html` — requisitos de hardware e tabela de versões
-- `download_images_precompileds.html` — downloads de imagens
+- `download_sourcecode.html` — código-fonte e comando git clone
+- `changelog.html` — tabela de versões 1.0–70.0
+- `requirements.html` — requisitos de hardware
+- `download_images_precompileds.html` — acesso às imagens publicadas
 - `compilation_guide.html` — guia inicial de compilação
-- `status_silviolinux_versions.html` — ciclo de vida e EOL
-- `wiki.html` — índice da Wiki
-- `docs.html` — índice da documentação
-- `css/style.css` — estilos
-- `assets/` — logo SVG, mascote vetorial e favicon
+- `status_silviolinux_versions.html` — status e política de suporte
+- `wiki.html` — acesso à Wiki
+- `docs.html` — documentação
+- `style.css` — estilos compartilhados
+- `assets/logo-silviolinux.svg` e `favicon.svg` — identidade visual vetorial
 
-## Visualizar localmente
-Abra `index.html` no navegador. Não é necessário servidor nem etapa de build.
+## Visualizar
+Abra `index.html` em um navegador. Não é necessário servidor nem dependências.
 
-## Código-fonte
-O site aponta para:
-`https://github.com/silvionetoes627/meta-silviolinux`
+## Observações do roadmap
+As datas e versões futuras são projeções do planejamento SilvioLinux, não lançamentos confirmados do Yocto Project. O EOL foi calculado como 48 meses após lançamento para LTS e 7 meses para Non-LTS. As datas fornecidas pelo solicitante foram preservadas, inclusive intervalos irregulares (por exemplo, versões 45–46).
 
-Clonagem da branch Aurora:
-```sh
-git clone -b aurora https://github.com/silvionetoes627/meta-silviolinux.git
-```
-
-## Política de versões representada
-- LTS: EOL calculado em 48 meses após o lançamento.
-- Non-LTS: EOL calculado em 7 meses após o lançamento.
-- Os nomes ausentes nas versões 36–70 foram sugeridos para completar o roadmap.
-- As datas, versões futuras do Yocto e codenames são planejamento proposto, não confirmação de releases upstream.
-
-## Personalização
-Edite `css/style.css`, os SVGs em `assets/` e o conteúdo HTML. Todas as páginas compartilham a mesma folha de estilos.
+Os requisitos de hardware são metas experimentais de execução no equipamento-alvo. A compilação Yocto deve ocorrer em uma máquina hospedeira muito mais potente. Pentium clássico/i586 e 16 MB RAM exigem uma imagem altamente reduzida e testes específicos.
