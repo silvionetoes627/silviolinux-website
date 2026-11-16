@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" role="img" aria-labelledby="t"><title id="t">SilvioLinux SL com mascote pinguim</title>
+<defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#27c7ff"/><stop offset="1" stop-color="#2367e8"/></linearGradient></defs>
+<rect x="4" y="4" width="142" height="142" rx="28" fill="#101d32" stroke="#2b9cff" stroke-width="5"/>
+<path d="M37 48h78M37 48v23h55v24H37v23h78" fill="none" stroke="url(#g)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="170" y="77" fill="#f3f7ff" font-family="Arial,sans-serif" font-size="52" font-weight="800">SilvioLinux</text>
+<text x="174" y="112" fill="#7ccfff" font-family="Arial,sans-serif" font-size="20" letter-spacing="5">SISTEMA LIVRE • LINUX</text>
+<g transform="translate(444 16)">
+<ellipse cx="32" cy="70" rx="27" ry="39" fill="#111827"/><ellipse cx="32" cy="75" rx="19" ry="28" fill="#f8fafc"/>
+<circle cx="23" cy="34" r="4" fill="#fff"/><circle cx="41" cy="34" r="4" fill="#fff"/>
+<circle cx="24" cy="35" r="2" fill="#111"/><circle cx="40" cy="35" r="2" fill="#111"/>
+<path d="M24 43l8 7 8-7z" fill="#ffb52e"/><path d="M9 104q-12 10-18 2l15-17M55 104q12 10 18 2L58 89" fill="#ffb52e"/>
+</g></svg>
