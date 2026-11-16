@@ -1,52 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SilvioLinux - Home</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <a href="index.html" class="logo">
-            <img src="img/logo.svg" alt="SL Logo" width="40">
-            SilvioLinux
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="compilation_guide.html">Guia de Compilação</a></li>
-                <li><a href="download_images_precompileds.html">Imagens Prontas</a></li>
-                <li><a href="download_sourcecode.html">Código-Fonte</a></li>
-                <li><a href="status_silviolinux_versions.html">Status</a></li>
-                <li><a href="changelog.html">Changelog</a></li>
-                <li><a href="wiki.html">Wiki</a></li>
-                <li><a href="docs.html">Docs</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="card">
-            <h1>Bem-vindo ao SilvioLinux</h1>
-            <p>O SilvioLinux é uma distribuição Linux customizada, construída com o poder do <strong>Yocto Project</strong> e a camada <strong>meta-silviolinux</strong>. Com foco em performance, estabilidade e transparência.</p>
-            <p>Com <strong>35 anos de evolução</strong> e um compromisso de suporte de longo prazo (<strong>LTS</strong>) de 4 anos por versão, o SilvioLinux é projetado para durar.</p>
-            <blockquote>"Primeiro lançamento oficial previsto para Abril de 2028."</blockquote>
-        </section>
-
-        <section class="card">
-            <h2>Destaques do Projeto</h2>
-            <ul>
-                <li><strong>Suporte LTS:</strong> 4 anos de atualizações garantidas.</li>
-                <li><strong>Base Yocto:</strong> Totalmente customizável desde o código-fonte.</li>
-                <li><strong>Open Source:</strong> Código disponível no Codeberg.</li>
-                <li><strong>Evolução Constante:</strong> Uma jornada de décadas em desenvolvimento.</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 SilvioLinux System. Criado com HTML5 e CSS3 Puros.</p>
-    </footer>
-</body>
-</html>
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Site oficial demonstrativo do SilvioLinux, sistema livre baseado no Yocto Project.">
+<title>Home | SilvioLinux</title><link rel="icon" href="assets/logo-silviolinux.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css"></head>
+<body><header class="topbar"><div class="wrap head"><a class="brand" href="index.html"><img src="assets/logo-silviolinux.svg" alt="SilvioLinux SL com Tux"></a><nav aria-label="Navegação principal"><a href="index.html" aria-current=page>Home</a><a href="download_sourcecode.html">Código-fonte</a><a href="changelog.html">Lançamentos</a><a href="download_images_precompileds.html">Imagens</a><a href="compilation_guide.html">Compilação</a><a href="status_silviolinux_versions.html">Status das versões</a><a href="wiki.html">Wiki</a><a href="docs.html">Documentação</a></nav></div></header>
+<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Liberdade · leveza · evolução</div>
+<h1>Seu sistema.<br>Seu caminho.</h1><p class="lead">SilvioLinux é uma proposta de distribuição Linux leve, moderna e minimalista, construída com o Yocto Project e pensada para oferecer uma base enxuta, personalizável e transparente.</p>
+<div class="actions"><a class="btn" href="download_images_precompileds.html">Explorar downloads</a><a class="btn secondary" href="compilation_guide.html">Começar a compilar</a></div>
+<div class="stats"><div class="stat"><strong>70</strong><span>versões planejadas</span></div><div class="stat"><strong>4 anos</strong><span>suporte LTS proposto</span></div><div class="stat"><strong>100%</strong><span>HTML + CSS neste site</span></div></div></div>
+<div class="hero-card"><img src="assets/logo-silviolinux.svg" alt="Marca SilvioLinux e mascote Tux"><h3>SilvioLinux</h3><p class="muted">Uma experiência Linux construída para evoluir.</p></div></div></section>
+<main class="wrap"><section class="section"><h2>Conheça o projeto</h2><p class="section-intro">O SilvioLinux utiliza o Yocto Project como estrutura de construção. O plano de versões abaixo é um roadmap de longo prazo: datas, versões futuras do Yocto e requisitos devem ser confirmados conforme cada ciclo de desenvolvimento se aproximar.</p>
+<div class="grid"><article class="card"><span class="tag">Código aberto</span><h3>Fonte e receitas</h3><p>Consulte a página de código-fonte para conhecer a organização sugerida do repositório e os comandos iniciais.</p><p><a href="download_sourcecode.html">Ver código-fonte →</a></p></article>
+<article class="card"><span class="tag">Ciclo de vida</span><h3>LTS e Non-LTS</h3><p>O plano propõe quatro anos de suporte para versões LTS e sete meses para versões Non-LTS.</p><p><a href="status_silviolinux_versions.html">Ver tabela completa →</a></p></article>
+<article class="card"><span class="tag">Comunidade</span><h3>Wiki e documentação</h3><p>Guias de arquitetura, configuração, compilação e manutenção do sistema.</p><p><a href="wiki.html">Abrir wiki →</a></p></article></div></section>
+<section class="section"><h2>Primeira versão planejada</h2><div class="notice"><strong>SilvioLinux 1 LTS — Aurora</strong><p>Lançamento planejado: 30 de junho de 2028 · Base prevista: Yocto Project 7.0 · Fim do suporte planejado: 30 de junho de 2032.</p><p>Esta é uma previsão de roadmap, não um anúncio de disponibilidade atual.</p></div></section></main>
+<footer><div class="wrap foot"><span>© SilvioLinux — projeto comunitário e independente.</span><span>Feito com HTML5 e CSS puro · Sem JavaScript</span></div></footer></body></html>

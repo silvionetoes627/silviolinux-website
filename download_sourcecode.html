@@ -1,57 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SilvioLinux - Código-Fonte</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <a href="index.html" class="logo">
-            <img src="img/logo.svg" alt="SL Logo" width="40">
-            SilvioLinux
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="compilation_guide.html">Guia de Compilação</a></li>
-                <li><a href="download_images_precompileds.html">Imagens Prontas</a></li>
-                <li><a href="download_sourcecode.html">Código-Fonte</a></li>
-                <li><a href="status_silviolinux_versions.html">Status</a></li>
-                <li><a href="changelog.html">Changelog</a></li>
-                <li><a href="wiki.html">Wiki</a></li>
-                <li><a href="docs.html">Docs</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="card">
-            <h1>Download do Código-Fonte (meta-silviolinux)</h1>
-            <p>Baixe as camadas do Yocto para realizar a compilação personalizada do sistema.</p>
-            
-            <div class="card">
-                <h3>Releases Estáveis</h3>
-                <p>Repositório: <code>meta-silviolinux</code></p>
-                <ul>
-                    <li><strong>Versão Atual:</strong> v1 (Development)</li>
-                    <li><strong>Formatos:</strong> 
-                        <a href="https://codeberg.org/SilvioLinux/meta-silviolinux/releases/" target="_blank">Download .zip</a> | 
-                        <a href="https://codeberg.org/SilvioLinux/meta-silviolinux/releases/" target="_blank">Download .tar.gz</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>Git Access</h3>
-                <pre>git clone https://codeberg.org/SilvioLinux/meta-silviolinux.git</pre>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 SilvioLinux System. Criado com HTML5 e CSS3 Puros.</p>
-    </footer>
-</body>
-</html>
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Site oficial demonstrativo do SilvioLinux, sistema livre baseado no Yocto Project.">
+<title>Download do código-fonte | SilvioLinux</title><link rel="icon" href="assets/logo-silviolinux.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css"></head>
+<body><header class="topbar"><div class="wrap head"><a class="brand" href="index.html"><img src="assets/logo-silviolinux.svg" alt="SilvioLinux SL com Tux"></a><nav aria-label="Navegação principal"><a href="index.html">Home</a><a href="download_sourcecode.html" aria-current=page>Código-fonte</a><a href="changelog.html">Lançamentos</a><a href="download_images_precompileds.html">Imagens</a><a href="compilation_guide.html">Compilação</a><a href="status_silviolinux_versions.html">Status das versões</a><a href="wiki.html">Wiki</a><a href="docs.html">Documentação</a></nav></div></header>
+<main class="wrap"><section class="page-head"><div class="crumb">SilvioLinux / Código-fonte</div><div class="eyebrow">Desenvolvimento</div><h1>Download do código-fonte</h1><p class="lead">Estrutura inicial sugerida para organizar as camadas, configurações e receitas do SilvioLinux.</p></section>
+<div class="notice"><strong>Repositório de exemplo</strong><p>Substitua a URL abaixo pela URL pública definitiva quando o repositório oficial estiver publicado. Não há um clone remoto incluído neste pacote.</p></div>
+<section class="section two-col"><article class="card"><h2>Clonar o projeto</h2><pre>git clone https://codeberg.org/SilvioRamalhoNeto/meta-silviolinux.git
+cd meta-silviolinux</pre><p class="muted">A URL é uma referência de projeto informada anteriormente e deve ser validada antes de publicar.</p></article>
+<article class="card"><h2>Estrutura sugerida</h2><pre>meta-silviolinux/
+├── conf/
+│   └── layer.conf
+├── recipes-core/
+├── recipes-kernel/
+├── recipes-graphics/
+└── README.md</pre></article></section>
+<section class="section"><h2>Ferramentas</h2><ul><li>Git para controle de versão.</li><li>BitBake e OpenEmbedded fornecidos pelo ambiente Yocto.</li><li>bitbake-setup, quando disponível e compatível com a versão da distribuição Yocto utilizada.</li><li>Um host Linux com espaço em disco, memória e dependências suficientes para a compilação.</li></ul></section></main>
+<footer><div class="wrap foot"><span>© SilvioLinux — projeto comunitário e independente.</span><span>Feito com HTML5 e CSS puro · Sem JavaScript</span></div></footer></body></html>

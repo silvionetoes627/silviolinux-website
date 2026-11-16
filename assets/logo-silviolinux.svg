@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 76" role="img" aria-label="Logotipo SilvioLinux SL com mascote Tux">
+<rect width="220" height="76" rx="15" fill="#101d35"/>
+<circle cx="39" cy="38" r="27" fill="#72e0bd"/>
+<text x="39" y="47" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="800" fill="#102239">SL</text>
+<g transform="translate(76 9)">
+<ellipse cx="17" cy="37" rx="15" ry="22" fill="#f5f7fb"/>
+<ellipse cx="17" cy="34" rx="10" ry="17" fill="#182338"/>
+<ellipse cx="17" cy="40" rx="8" ry="11" fill="#fff"/>
+<circle cx="12" cy="20" r="2.2" fill="#fff"/><circle cx="22" cy="20" r="2.2" fill="#fff"/>
+<path d="M13 25 L21 25 L17 30 Z" fill="#f2b84b"/>
+<path d="M6 55 Q1 62 10 61 L16 57 M28 55 Q34 62 25 61 L18 57" fill="#f2b84b"/>
+</g>
+<text x="119" y="34" font-family="Arial,sans-serif" font-size="18" font-weight="800" fill="#fff">SilvioLinux</text>
+<text x="119" y="51" font-family="Arial,sans-serif" font-size="9" letter-spacing="2" fill="#a9bdd4">SISTEMA LIVRE</text>
+</svg>

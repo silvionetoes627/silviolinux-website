@@ -1,59 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SilvioLinux - Guia de Compilação</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <a href="index.html" class="logo">
-            <img src="img/logo.svg" alt="SL Logo" width="40">
-            SilvioLinux
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="compilation_guide.html">Guia de Compilação</a></li>
-                <li><a href="download_images_precompileds.html">Imagens Prontas</a></li>
-                <li><a href="download_sourcecode.html">Código-Fonte</a></li>
-                <li><a href="status_silviolinux_versions.html">Status</a></li>
-                <li><a href="changelog.html">Changelog</a></li>
-                <li><a href="wiki.html">Wiki</a></li>
-                <li><a href="docs.html">Docs</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="card">
-            <h1>Guia de Compilação SilvioLinux</h1>
-            <p>Siga os passos abaixo para compilar sua própria imagem do SilvioLinux utilizando a camada meta-silviolinux.</p>
-            
-            <h2>1. Requisitos do Sistema</h2>
-            <p>Você precisará de uma máquina Linux (Ubuntu 22.04+ recomendado) com pelo menos 100GB de espaço livre e as dependências do Yocto instaladas.</p>
-            <pre>sudo apt-get install gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm python3-subunit mesa-common-dev zstd liblz4-tool</pre>
-
-            <h2>2. Clonar os Repositórios</h2>
-            <pre>git clone -b scarthgap git://git.yoctoproject.org/poky
-cd poky
-git clone https://codeberg.org/SilvioLinux/meta-silviolinux</pre>
-
-            <h2>3. Configurar o Ambiente</h2>
-            <pre>source oe-init-build-env</pre>
-
-            <h2>4. Adicionar a Camada</h2>
-            <pre>bitbake-layers add-layer ../meta-silviolinux</pre>
-
-            <h2>5. Iniciar a Compilação</h2>
-            <pre>bitbake silviolinux-image-minimal</pre>
-            <p>Aguarde a conclusão. O tempo depende do seu hardware.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 SilvioLinux System. Criado com HTML5 e CSS3 Puros.</p>
-    </footer>
-</body>
-</html>
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Site oficial demonstrativo do SilvioLinux, sistema livre baseado no Yocto Project.">
+<title>Guia de compilação | SilvioLinux</title><link rel="icon" href="assets/logo-silviolinux.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css"></head>
+<body><header class="topbar"><div class="wrap head"><a class="brand" href="index.html"><img src="assets/logo-silviolinux.svg" alt="SilvioLinux SL com Tux"></a><nav aria-label="Navegação principal"><a href="index.html">Home</a><a href="download_sourcecode.html">Código-fonte</a><a href="changelog.html">Lançamentos</a><a href="download_images_precompileds.html">Imagens</a><a href="compilation_guide.html" aria-current=page>Compilação</a><a href="status_silviolinux_versions.html">Status das versões</a><a href="wiki.html">Wiki</a><a href="docs.html">Documentação</a></nav></div></header>
+<main class="wrap"><section class="page-head"><div class="crumb">SilvioLinux / Desenvolvimento</div><div class="eyebrow">Guia técnico</div><h1>Guia de compilação</h1><p class="lead">Fluxo de referência para preparar um ambiente Yocto e iniciar a construção da imagem SilvioLinux.</p></section>
+<div class="notice"><strong>Antes de começar</strong><p>Use a documentação oficial da versão Yocto escolhida. Os comandos exatos, dependências do host e nomes de targets podem mudar entre releases. O exemplo abaixo é um esqueleto e pressupõe que a camada do SilvioLinux já exista.</p></div>
+<section class="section"><h2>1. Preparar o host</h2><p>Utilize uma distribuição Linux suportada pelo Yocto, instale as dependências indicadas no manual da versão e reserve espaço amplo em disco. Compilações completas podem consumir dezenas de gigabytes.</p><pre>sudo apt update
+sudo apt install git diffstat chrpath cpio python3   python3-pip python3-pexpect xz-utils file   gcc g++ make socat unzip wget</pre></section>
+<section class="section"><h2>2. Obter o código</h2><pre>git clone https://git.yoctoproject.org/poky
+git clone https://codeberg.org/SilvioRamalhoNeto/meta-silviolinux.git</pre><p class="muted">Confira os branches/tags compatíveis entre Poky, layers e BitBake antes de compilar.</p></section>
+<section class="section"><h2>3. Inicializar o ambiente</h2><pre>cd poky
+source oe-init-build-env build-silviolinux</pre></section>
+<section class="section"><h2>4. Configurar as camadas</h2><p>Adicione o caminho da camada <code>meta-silviolinux</code> a <code>conf/bblayers.conf</code> e configure máquina, distribuição e recursos em <code>conf/local.conf</code> e nos arquivos de distro.</p><pre># Exemplo conceitual — ajuste os caminhos e nomes reais
+BBLAYERS += "${TOPDIR}/../meta-silviolinux"
+DISTRO = "silviolinux"
+MACHINE = "qemux86"</pre></section>
+<section class="section"><h2>5. Executar a compilação</h2><pre>bitbake core-image-minimal</pre><p>Quando o projeto fornecer uma imagem própria, substitua <code>core-image-minimal</code> pelo nome real da receita, por exemplo <code>silviolinux-image</code>.</p></section>
+<section class="section"><h2>6. Testar e publicar</h2><ul><li>Teste a imagem em QEMU e no hardware-alvo.</li><li>Valide boot, rede, armazenamento, instalação e atualização de pacotes.</li><li>Gere SHA-256, assine os artefatos e publique notas de lançamento.</li></ul></section></main>
+<footer><div class="wrap foot"><span>© SilvioLinux — projeto comunitário e independente.</span><span>Feito com HTML5 e CSS puro · Sem JavaScript</span></div></footer></body></html>
