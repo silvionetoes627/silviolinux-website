@@ -1,10 +1,28 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Site oficial do projeto SilvioLinux."><title>Guia de compilação | SilvioLinux</title><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="stylesheet" href="style.css"></head>
-<body><header><div class="container head"><a class="brand" href="index.html"><img src="assets/logo-silviolinux.svg" alt="SilvioLinux — logo SL com o mascote Tux"></a><nav aria-label="Navegação principal"><a href="index.html">Início</a><a href="download_sourcecode.html">Código-fonte</a><a href="changelog.html">Lançamentos</a><a href="requirements.html">Requisitos</a><a href="download_images_precompileds.html">Imagens</a><a href="compilation_guide.html">Compilação</a><a href="status_silviolinux_versions.html">Status</a><a href="wiki.html">Wiki</a><a href="docs.html">Documentação</a></nav></div></header>
-<main class="container">
-<div class="page-head"><div class="eyebrow">Desenvolvedores</div><h1>Guia de compilação</h1><p class="lead">Fluxo inicial para preparar o ambiente e compilar uma imagem Yocto/OpenEmbedded.</p></div><div class="content"><div class="notice warning">Os nomes de layers, máquinas e receitas abaixo são exemplos. Ajuste-os ao conteúdo real do repositório SilvioLinux e à versão do Yocto usada.</div><h2>1. Obtenha o código</h2><pre><code>git clone -b aurora https://github.com/silvionetoes627/meta-silviolinux.git
-cd meta-silviolinux</code></pre><h2>2. Prepare o ambiente</h2><p>Instale as dependências recomendadas pela documentação da versão Yocto escolhida na sua distribuição hospedeira. Use uma máquina Linux x86_64 com espaço livre amplo.</p><h2>3. Inicialize o ambiente de build</h2><pre><code># Exemplo genérico — ajuste o caminho do poky e da layer
-source poky/oe-init-build-env build</code></pre><h2>4. Configure a máquina e as layers</h2><pre><code># Em conf/bblayers.conf, inclua as layers necessárias
-# Em conf/local.conf, defina MACHINE e opções da imagem
-bitbake-layers show-layers
-bitbake-layers show-recipes</code></pre><h2>5. Compile a imagem</h2><pre><code>bitbake core-image-minimal</code></pre><h2>6. Valide a imagem</h2><ul><li>Confira os artefatos gerados em <code>tmp/deploy/images/</code>.</li><li>Teste primeiro em QEMU quando houver suporte à máquina configurada.</li><li>Depois valide boot, armazenamento, rede e consumo de memória no hardware-alvo.</li></ul></div></main><footer><div class="container foot"><div><strong>SilvioLinux</strong><br><span class="small">Projeto comunitário independente • Português (Brasil)</span></div><div class="small">Site demonstrativo — datas futuras e roadmap são projeções do projeto.<br>Yocto Project é uma marca registrada de seus respectivos titulares.</div></div></footer></body></html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Site oficial do SilvioLinux — sistema Linux livre, leve e personalizável.">
+<meta name="theme-color" content="#101b2c">
+<title>Guia de compilação | SilvioLinux</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="wrap">
+<div class="top"><a class="brand" href="index.html"><img src="assets/silviolinux-logo.svg" alt="SilvioLinux — SL"></a><div class="tagline">Uma distribuição Linux independente<br>Projeto criado por Sílvio Ramalho Neto da Silva</div></div>
+<nav class="nav"><a class="" href="index.html">Início</a><a class="" href="download_sourcecode.html">Código-fonte</a><a class="" href="download_images_precompileds.html">Imagens</a><a class="" href="requirements.html">Requisitos</a><a class="" href="write.html">Gravação</a><a class="" href="support.html">Suporte</a><a class="" href="changelog.html">Lançamentos</a><a class="" href="status_silviolinux_versions.html">Status</a><a class="active" href="compilation_guide.html">Compilação</a><a class="" href="wiki.html">Wiki</a><a class="" href="docs.html">Documentação</a><a class="" href="technical_support.html">Suporte técnico</a></nav>
+</div></header>
+<main class="wrap">
+<div class="eyebrow">Desenvolvedores</div><h1>Guia de compilação</h1><p class="lead">Fluxo de referência para construir imagens SilvioLinux com o Yocto Project e a camada meta-silviolinux.</p>
+<h2>1. Preparar o ambiente</h2><p>Use uma distribuição Linux suportada pela versão do Yocto escolhida. Instale os pacotes de dependência listados na documentação oficial do Yocto para seu sistema hospedeiro.</p>
+<h2>2. Obter a camada</h2><pre>git clone -b aurora https://github.com/silvionetoes627/meta-silviolinux.git
+cd meta-silviolinux</pre>
+<h2>3. Inicializar o ambiente</h2><p>O comando exato depende do layout do repositório, do manifest e da versão do Yocto. Em um projeto baseado em <code>oe-init-build-env</code>, o fluxo costuma seguir este padrão:</p><pre>source oe-init-build-env build</pre>
+<h2>4. Configurar e compilar</h2><p>Configure <code>conf/local.conf</code> e <code>conf/bblayers.conf</code> de acordo com a máquina-alvo, distro e camadas realmente disponíveis. Depois, execute o alvo de imagem definido pelo projeto:</p><pre>bitbake NOME-DA-IMAGEM</pre>
+<div class="notice"><strong>Não copie o comando de exemplo sem conferir:</strong> <code>NOME-DA-IMAGEM</code> é um marcador. O nome real da receita deve ser confirmado no repositório. O pacote deste site não presume receitas, branches auxiliares ou configurações que não foram fornecidas.</div>
+<h2>5. Artefatos</h2><p>Quando habilitados na configuração da máquina, os builds podem produzir imagens como WIC e/ou IMG. Verifique o diretório de deploy da compilação e a documentação da placa-alvo.</p>
+</main>
+<footer><div class="wrap footer-grid"><div><strong>SilvioLinux</strong><p>Projeto independente de sistema operacional.</p><p class="small">Criador: Sílvio Ramalho Neto da Silva</p></div><div><p><a href="technical_support.html">Suporte técnico</a> · <a href="support.html">Política de suporte</a></p><p><a href="docs.html">Documentação</a> · <a href="wiki.html">Wiki</a></p><p class="small">© SilvioLinux — conteúdo de planejamento do projeto.</p></div></div></footer>
+</body></html>

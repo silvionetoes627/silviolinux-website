@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Site oficial do SilvioLinux — sistema Linux livre, leve e personalizável.">
+<meta name="theme-color" content="#101b2c">
+<title>Gravação no disco | SilvioLinux</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="wrap">
+<div class="top"><a class="brand" href="index.html"><img src="assets/silviolinux-logo.svg" alt="SilvioLinux — SL"></a><div class="tagline">Uma distribuição Linux independente<br>Projeto criado por Sílvio Ramalho Neto da Silva</div></div>
+<nav class="nav"><a class="" href="index.html">Início</a><a class="" href="download_sourcecode.html">Código-fonte</a><a class="" href="download_images_precompileds.html">Imagens</a><a class="" href="requirements.html">Requisitos</a><a class="active" href="write.html">Gravação</a><a class="" href="support.html">Suporte</a><a class="" href="changelog.html">Lançamentos</a><a class="" href="status_silviolinux_versions.html">Status</a><a class="" href="compilation_guide.html">Compilação</a><a class="" href="wiki.html">Wiki</a><a class="" href="docs.html">Documentação</a><a class="" href="technical_support.html">Suporte técnico</a></nav>
+</div></header>
+<main class="wrap">
+<div class="eyebrow">Mídia de instalação</div><h1>Como gravar o SilvioLinux no disco</h1><p class="lead">O SilvioLinux foi planejado para iniciar diretamente de uma imagem de sistema, sem um instalador pesado e sem exigir uma instalação manual tradicional.</p>
+<div class="card"><h3>Formatos de imagem</h3><p><strong>WIC (.wic)</strong> e <strong>IMG (.img)</strong>. A imagem deverá conter o RootFS (sistema de arquivos raiz) e o Kernel Linux, além das partições e metadados necessários para inicialização.</p></div>
+<h2>Como funciona</h2><ol><li>Baixe uma imagem compatível com seu dispositivo.</li><li>Identifique corretamente o cartão de memória, pendrive, HD externo USB ou SSD externo.</li><li>Grave o arquivo WIC ou IMG com uma ferramenta de gravação de imagens confiável.</li><li>Ejete o dispositivo com segurança e configure o computador/placa para inicializar por ele.</li></ol>
+<div class="notice"><strong>Atenção:</strong> gravar uma imagem sobrescreve os dados do dispositivo selecionado. Confira cuidadosamente o destino antes de iniciar.</div>
+<h2>Onde gravar</h2><ul><li>Cartão de memória.</li><li>Pendrive USB.</li><li>HD externo USB 3.0.</li><li>SSD externo USB 2.0 ou USB 3.0.</li></ul>
+<h2>Velocidade USB</h2><p>Em condições equivalentes, USB 3.0 costuma oferecer gravação mais rápida que USB 2.0. Em USB 2.0, o processo tende a demorar mais. A velocidade real também depende do dispositivo, da porta, do controlador, do arquivo e da ferramenta utilizada. Um SSD USB 2.0 pode ser limitado pela interface, mesmo sendo um SSD.</p>
+<h2>Kernel customizado</h2><p>O projeto planeja manter variantes de kernel identificadas como <code>linux-silvio-slts</code> e <code>linux-silvio-lts</code>, alinhadas às linhas de suporte correspondentes.</p>
+</main>
+<footer><div class="wrap footer-grid"><div><strong>SilvioLinux</strong><p>Projeto independente de sistema operacional.</p><p class="small">Criador: Sílvio Ramalho Neto da Silva</p></div><div><p><a href="technical_support.html">Suporte técnico</a> · <a href="support.html">Política de suporte</a></p><p><a href="docs.html">Documentação</a> · <a href="wiki.html">Wiki</a></p><p class="small">© SilvioLinux — conteúdo de planejamento do projeto.</p></div></div></footer>
+</body></html>

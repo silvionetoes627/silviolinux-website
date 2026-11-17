@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 190" role="img" aria-label="Mascote pinguim inspirado no Tux">
+<ellipse cx="90" cy="172" rx="58" ry="10" fill="#dce5ee"/>
+<path d="M90 15c-37 0-56 36-53 83 2 39 19 64 53 64s51-25 53-64c3-47-16-83-53-83z" fill="#202a39"/>
+<ellipse cx="90" cy="103" rx="39" ry="54" fill="#fff"/>
+<ellipse cx="72" cy="61" rx="9" ry="12" fill="#fff"/><ellipse cx="108" cy="61" rx="9" ry="12" fill="#fff"/>
+<circle cx="74" cy="64" r="4" fill="#101827"/><circle cx="106" cy="64" r="4" fill="#101827"/>
+<path d="M76 79q14 15 28 0q-14-8-28 0" fill="#f2a900"/>
+<path d="M50 111q-26 9-34 35 22 13 44-8M130 111q26 9 34 35-22 13-44-8" fill="#202a39"/>
+<path d="M55 153q-7 14-3 21 20 8 38-3l-8-14M125 153q7 14 3 21-20 8-38-3l8-14" fill="#f2a900"/>
+</svg>

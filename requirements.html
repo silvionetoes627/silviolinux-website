@@ -1,5 +1,44 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Site oficial do projeto SilvioLinux."><title>Requisitos de hardware | SilvioLinux</title><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="stylesheet" href="style.css"></head>
-<body><header><div class="container head"><a class="brand" href="index.html"><img src="assets/logo-silviolinux.svg" alt="SilvioLinux — logo SL com o mascote Tux"></a><nav aria-label="Navegação principal"><a href="index.html">Início</a><a href="download_sourcecode.html">Código-fonte</a><a href="changelog.html">Lançamentos</a><a href="requirements.html">Requisitos</a><a href="download_images_precompileds.html">Imagens</a><a href="compilation_guide.html">Compilação</a><a href="status_silviolinux_versions.html">Status</a><a href="wiki.html">Wiki</a><a href="docs.html">Documentação</a></nav></div></header>
-<main class="container">
-<div class="page-head"><div class="eyebrow">Compatibilidade</div><h1>Requisitos de hardware</h1><p class="lead">Perfis-alvo experimentais para as famílias SilvioLinux 1–49 e 50–70.</p></div><div class="notice warning"><strong>Nota técnica:</strong> 16 MB de RAM em um Pentium clássico é um alvo extremamente restrito para Linux moderno e para componentes usuais de uma distribuição Yocto. A viabilidade depende de kernel, libc, init, serviços e aplicações muito reduzidos. A máquina-alvo não é a máquina hospedeira de compilação.</div><div class="table-wrap"><table><thead><tr><th>Versões</th><th>Perfil</th><th>CPU / arquitetura</th><th>RAM mínima</th><th>RAM recomendada</th><th>Armazenamento</th><th>Uso previsto</th></tr></thead><tbody><tr><td>1.0–49.0</td><td>Clássico</td><td>Pentium 75 MHz, x86 32-bit (i586)</td><td>16 MB</td><td>32 MB</td><td>200 MB mínimo / 500 MB recomendado</td><td>Console, BusyBox, poucos serviços; sem desktop no perfil mínimo</td></tr><tr><td>50.0–70.0</td><td>Retro leve</td><td>Pentium II 300 MHz, x86 32-bit (i686)</td><td>64 MB</td><td>128 MB</td><td>500 MB mínimo / 1 GB recomendado</td><td>Console, rede e interface gráfica opcional bem enxuta</td></tr></tbody></table></div><h2>Requisitos da máquina de compilação</h2><p>Use um computador hospedeiro moderno, com Linux de 64 bits, múltiplos núcleos, pelo menos 8 GB de RAM (16 GB ou mais recomendado) e dezenas de GB livres. Builds completos do Yocto podem exigir bastante mais, dependendo da imagem e do número de tarefas paralelas.</p><h2>Arquitetura e limitações</h2><ul><li>Confirme se a versão escolhida do Yocto/OE-Core ainda suporta a arquitetura x86 de 32 bits e o nível de instrução exigido pelo Pentium-alvo.</li><li>Não presuma que uma imagem feita para i686 executará em um Pentium clássico i586.</li><li>Os requisitos são metas de projeto, não uma garantia de compatibilidade até que haja testes em hardware real.</li></ul></main><footer><div class="container foot"><div><strong>SilvioLinux</strong><br><span class="small">Projeto comunitário independente • Português (Brasil)</span></div><div class="small">Site demonstrativo — datas futuras e roadmap são projeções do projeto.<br>Yocto Project é uma marca registrada de seus respectivos titulares.</div></div></footer></body></html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Site oficial do SilvioLinux — sistema Linux livre, leve e personalizável.">
+<meta name="theme-color" content="#101b2c">
+<title>Requisitos de hardware | SilvioLinux</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="wrap">
+<div class="top"><a class="brand" href="index.html"><img src="assets/silviolinux-logo.svg" alt="SilvioLinux — SL"></a><div class="tagline">Uma distribuição Linux independente<br>Projeto criado por Sílvio Ramalho Neto da Silva</div></div>
+<nav class="nav"><a class="" href="index.html">Início</a><a class="" href="download_sourcecode.html">Código-fonte</a><a class="" href="download_images_precompileds.html">Imagens</a><a class="active" href="requirements.html">Requisitos</a><a class="" href="write.html">Gravação</a><a class="" href="support.html">Suporte</a><a class="" href="changelog.html">Lançamentos</a><a class="" href="status_silviolinux_versions.html">Status</a><a class="" href="compilation_guide.html">Compilação</a><a class="" href="wiki.html">Wiki</a><a class="" href="docs.html">Documentação</a><a class="" href="technical_support.html">Suporte técnico</a></nav>
+</div></header>
+<main class="wrap">
+<div class="eyebrow">Compatibilidade</div><h1>Requisitos de hardware</h1><p class="lead">O roadmap prevê três perfis de plataforma. Os números abaixo são metas mínimas históricas/experimentais e devem ser validados com imagens reais.</p>
+<div class="notice"><strong>Nota técnica:</strong> 16 MB de RAM e Pentium clássico são metas extremamente restritivas para uma distribuição construída com Yocto. A viabilidade depende de uma imagem muito enxuta, kernel, drivers e serviços selecionados. Não são requisitos garantidos para todas as edições, especialmente Desktop, Gaming e Mobile.</div>
+<div class="table-wrap"><table><thead><tr><th>Faixa SilvioLinux</th><th>Init</th><th>CPU mínima planejada</th><th>RAM mínima planejada</th><th>Base Yocto planejada</th></tr></thead><tbody>
+<tr><td>1.0–38.x</td><td>BusyBox init</td><td>Intel Pentium clássico 75 MHz</td><td>16 MB</td><td>Yocto 7.x até 16.1</td></tr>
+<tr><td>39.0–59.x</td><td>systemd</td><td>Intel Pentium II 233 MHz</td><td>128 MB</td><td>Yocto 16.2 até 21.2</td></tr>
+<tr><td>60.0–70.0</td><td>systemd</td><td>Intel Pentium II 300 MHz</td><td>256 MB</td><td>Yocto 21.3 até 24.1</td></tr>
+</tbody></table></div>
+<p class="small muted">A versão 39.0 foi tratada como início da faixa systemd para eliminar a sobreposição entre os intervalos “1.0 a 39.0” e “39.0 a 59.0”.</p>
+<h2>Requisitos recomendados (metas iniciais)</h2>
+<div class="table-wrap"><table><thead><tr><th>Perfil</th><th>CPU recomendada</th><th>RAM recomendada</th><th>Armazenamento</th></tr></thead><tbody>
+<tr><td>Minimal / Base</td><td>Pentium II ou superior</td><td>64–256 MB conforme a versão</td><td>1 GB ou mais</td></tr>
+<tr><td>Desktop</td><td>CPU x86 compatível com a interface escolhida</td><td>1 GB ou mais</td><td>8 GB ou mais</td></tr>
+<tr><td>Server</td><td>CPU x86_64 multicore recomendada</td><td>2 GB ou mais</td><td>16 GB ou mais</td></tr>
+<tr><td>Gaming</td><td>CPU e GPU compatíveis com os jogos</td><td>4 GB ou mais</td><td>32 GB ou mais</td></tr>
+<tr><td>Mobile</td><td>SoC/placa especificamente suportado</td><td>Dependente do dispositivo</td><td>Dependente do dispositivo</td></tr>
+</tbody></table></div>
+<h2>Seis edições</h2><div class="grid">
+<div class="card"><h3>Desktop Edition</h3><p>Ambiente gráfico e aplicações de uso diário.</p></div>
+<div class="card"><h3>Base Edition</h3><p>Sistema base para personalização e criação de produtos.</p></div>
+<div class="card"><h3>Minimal Edition</h3><p>Imagem reduzida, poucos serviços e baixo consumo.</p></div>
+<div class="card"><h3>Server Edition</h3><p>Serviços de rede e infraestrutura sem interface gráfica por padrão.</p></div>
+<div class="card"><h3>Gaming Edition</h3><p>Pacotes e ajustes para jogos, conforme suporte de hardware.</p></div>
+<div class="card"><h3>Mobile Edition</h3><p>Imagem para dispositivos móveis e placas suportadas.</p></div>
+</div>
+</main>
+<footer><div class="wrap footer-grid"><div><strong>SilvioLinux</strong><p>Projeto independente de sistema operacional.</p><p class="small">Criador: Sílvio Ramalho Neto da Silva</p></div><div><p><a href="technical_support.html">Suporte técnico</a> · <a href="support.html">Política de suporte</a></p><p><a href="docs.html">Documentação</a> · <a href="wiki.html">Wiki</a></p><p class="small">© SilvioLinux — conteúdo de planejamento do projeto.</p></div></div></footer>
+</body></html>
